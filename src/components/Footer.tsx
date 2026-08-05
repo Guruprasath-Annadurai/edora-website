@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'About Us', href: '#about' },
@@ -32,6 +34,12 @@ export default function Footer() {
               {link.label}
             </a>
           ))}
+          <Link
+            to="/privacy"
+            className="text-sm text-white/60 transition-colors hover:text-white"
+          >
+            Privacy Policy
+          </Link>
         </nav>
 
         <p className="text-xs text-white/40">
