@@ -150,7 +150,7 @@ export default function Hero() {
           </h1>
 
           <a
-            href="https://play.google.com/store"
+            href="https://play.google.com/store/apps/details?id=com.edora.app"
             target="_blank"
             rel="noreferrer"
             className="group mt-10 inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-900 md:px-8 md:py-4 md:text-base"

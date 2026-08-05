@@ -1,5 +1,6 @@
 import Hero from '../components/Hero';
 import About from '../components/About';
+import FounderMessage from '../components/FounderMessage';
 import Features from '../components/Features';
 import WhyEdora from '../components/WhyEdora';
 import Blog from '../components/Blog';
@@ -11,6 +12,7 @@ export default function Home() {
     <>
       <Hero />
       <About />
+      <FounderMessage />
       <Features />
       <WhyEdora />
       <Blog />
