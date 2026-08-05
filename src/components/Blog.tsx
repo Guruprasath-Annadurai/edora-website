@@ -1,28 +1,6 @@
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
-const POSTS = [
-  {
-    title: 'Why Spaced Repetition Beats Re-Reading Your Notes',
-    excerpt:
-      'The science behind why reviewing a flashcard right before you forget it works better than rereading a chapter five times.',
-    date: 'Aug 2026',
-    readTime: '4 min read',
-  },
-  {
-    title: 'Building a Revision Timetable That Survives Week Two',
-    excerpt:
-      'Most study schedules fall apart within days. Here’s how to build one that accounts for the days you don’t stick to it.',
-    date: 'Jul 2026',
-    readTime: '5 min read',
-  },
-  {
-    title: 'What Actually Changes Between JEE Main and JEE Advanced',
-    excerpt:
-      'A practical breakdown of how the question style, time pressure, and negative marking differ — and how to prep for both.',
-    date: 'Jul 2026',
-    readTime: '6 min read',
-  },
-];
+import { POSTS } from '../content/posts';
 
 export default function Blog() {
   return (
@@ -49,9 +27,9 @@ export default function Blog() {
 
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {POSTS.map((post) => (
-            <a
-              key={post.title}
-              href="#"
+            <Link
+              key={post.slug}
+              to={`/blog/${post.slug}`}
               className="group flex flex-col rounded-2xl border border-gray-800 p-6 transition-colors hover:border-gray-600"
             >
               <div className="flex items-center gap-2 text-xs text-white/50">
@@ -72,7 +50,7 @@ export default function Blog() {
                   className="transition-transform duration-300 group-hover:translate-x-1"
                 />
               </span>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
